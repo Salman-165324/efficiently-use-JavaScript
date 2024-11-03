@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Datalist</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .custom-select {
+            width: 300px;
+            position: relative;
+        }
+
+        .custom-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .custom-input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        .custom-input:hover {
+            border-color: #cbd5e0;
+        }
+
+        /* Styling for dropdown options */
+        input::-webkit-calendar-picker-indicator {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        /* For Firefox */
+        .custom-input::-moz-focus-inner {
+            border: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="custom-select">
+      <input 
+        type="text" 
+        list="frameworks" 
+        placeholder="Select a framework..."
+        class="custom-input"
+      >
+      <datalist id="frameworks">
+        <option value="Bootstrap">
+        <option value="Tailwind">
+        <option value="Bulma">
+        <option value="UIKit">
+      </datalist>
+    </div>
+  </body>
+</html>
